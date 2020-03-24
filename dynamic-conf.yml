@@ -15,8 +15,8 @@ http:
         usersFile: "/.htpasswd"
     redirect:
       redirectScheme:
-              #scheme: https
-              scheme: http
+              scheme: https
+              #scheme: http
 tls:
   stores:
     default:
@@ -26,10 +26,6 @@ tls:
   certificates:
     - certFile: /etc/ssl/base-domain/bundle.crt
       keyFile: /etc/ssl/base-domain/privkey.key
-      stores:
-        - default
-    - certFile: /etc/ssl/intern.schmitt-aufzuege.com/bundle.crt
-      keyFile: /etc/ssl/intern.schmitt-aufzuege.com/privkey.key
       stores:
         - default
   options:

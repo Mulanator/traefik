@@ -17,8 +17,7 @@ services:
       - ./dynamic-conf.yml:/dynamic-conf.yml:ro
       - ./.htpasswd:/.htpasswd:ro
       - traefik-etc:/usr/local/etc
-        #      - /etc/ssl/${BASE_DOMAIN}:/etc/ssl/base-domain:ro
-        #      - /etc/ssl/intern.schmitt-aufzuege.com:/etc/ssl/intern.schmitt-aufzuege.com:ro
+      - /etc/ssl/${BASE_DOMAIN}:/etc/ssl/base-domain:ro
 networks:
   proxy:
     name: ${DOCKER_NETWORK_NAME}
