@@ -24,3 +24,10 @@ api:
   dashboard: true
 log: {}
 accessLog: {}
+certificatesResolvers:
+        default:
+                acme:
+                        email: masteryoda@gmx.de
+                        storage: acme.json
+                        httpChallenge:
+                                entryPoint: http
