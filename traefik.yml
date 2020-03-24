@@ -1,0 +1,26 @@
+global:
+  checkNewVersion: false
+  sendAnonymousUsage: false
+serversTransport:
+  insecureSkipVerify: true
+entryPoints:
+  http:
+    address: :80
+  https:
+    address: :443
+  traefik:
+    address: :8080
+providers:
+  providersThrottleDuration: 2s
+  file:
+    filename: "/dynamic-conf.yml"
+  docker:
+    endpoint: "unix:///var/run/docker.sock"
+    watch: true
+    swarmModeRefreshSeconds: 15s
+    exposedByDefault: false
+api:
+  insecure: true 
+  dashboard: true
+log: {}
+accessLog: {}
