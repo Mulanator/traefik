@@ -17,19 +17,19 @@ http:
       redirectScheme:
               scheme: https
               #scheme: http
-tls:
-  stores:
-    default:
-      defaultCertificate:
-        certFile: /etc/ssl/base-domain/bundle.crt
-        keyFile: /etc/ssl/base-domain/privkey.key
-  certificates:
-    - certFile: /etc/ssl/base-domain/bundle.crt
-      keyFile: /etc/ssl/base-domain/privkey.key
-      stores:
-        - default
-  options:
-    default:
+#tls:
+#  stores:
+#    default:
+#      defaultCertificate:
+#        certFile: /etc/ssl/base-domain/fullchain.pem
+#        keyFile: /etc/ssl/base-domain/privkey.pem
+#  certificates:
+#    - certFile: /etc/ssl/base-domain/fullchain.pem
+#      keyFile: /etc/ssl/base-domain/privkey.pem
+#      stores:
+#        - default
+#  options:
+#    default:
       #minVersion: VersionTLS10
       #      cipherSuites:
       #        - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256

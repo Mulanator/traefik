@@ -25,9 +25,10 @@ api:
 log: {}
 accessLog: {}
 certificatesResolvers:
-        default:
-                acme:
-                        email: masteryoda@gmx.de
-                        storage: acme.json
-                        httpChallenge:
-                                entryPoint: http
+  default:
+    acme:
+      email: masteryoda@gmx.de
+      storage: acme.json
+      caServer: https://acme-staging-v02.api.letsencrypt.org/directory #staging only, uncomment for live sites
+      httpChallenge:
+        entryPoint: http

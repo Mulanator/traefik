@@ -17,7 +17,8 @@ services:
       - ./dynamic-conf.yml:/dynamic-conf.yml:ro
       - ./.htpasswd:/.htpasswd:ro
       - traefik-etc:/usr/local/etc
-      - /etc/ssl/${BASE_DOMAIN}:/etc/ssl/base-domain:ro
+      - ./acme.json:/acme.json
+        #- /etc/ssl/${BASE_DOMAIN}:/etc/ssl/base-domain:ro
 networks:
   proxy:
     name: ${DOCKER_NETWORK_NAME}
